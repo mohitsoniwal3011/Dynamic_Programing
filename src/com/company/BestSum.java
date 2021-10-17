@@ -5,7 +5,7 @@ import java.util.*;
 PROBLEM STATEMENT::
 
 Write a function bestSum(targetSum,number) which takes targetSum and An array of integers 'number'
-that adds up to exactly the targetSum
+that adds up to exactly the targetSum. You may use elements of the array any number of times you want .
 
 the function should return the shortest combination of numbers that adds up to
 targetSum.If there is a tie for the shortest combination then program can return any one of the shortest
