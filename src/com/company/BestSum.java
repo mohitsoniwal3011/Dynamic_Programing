@@ -63,3 +63,11 @@ public class BestSum {
         }
     }
 }
+
+//Brute force
+//time - O(n^m*m)
+//space - O(m^2)
+
+//Memoized
+//time - O(n*m*m)
+//space - O(m^2)
