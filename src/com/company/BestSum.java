@@ -61,9 +61,5 @@ public class BestSum {
            }
             System.out.println();
         }
-
-
-
-
     }
 }
