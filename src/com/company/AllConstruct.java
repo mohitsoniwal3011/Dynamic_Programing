@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class AllConstruct {
-    public ArrayList<ArrayList<String >> allConstructs2(String target, String [] wordBank,HashMap<String ,ArrayList<ArrayList<String >>> memo){
+    public ArrayList<ArrayList<String >> allConstructs(String target, String [] wordBank,HashMap<String ,ArrayList<ArrayList<String >>> memo){
         if(memo.containsKey(target)){
             return memo.get(target);
         }
@@ -20,7 +20,7 @@ public class AllConstruct {
         ArrayList<ArrayList<String>> totalWays;
         for(int i=0;i<wordBank.length;i++){
             if(target.indexOf(wordBank[i]) == 0){
-                ArrayList<ArrayList<String >> result=allConstructs2(target.substring(wordBank[i].length()),wordBank,memo);
+                ArrayList<ArrayList<String >> result=allConstructs(target.substring(wordBank[i].length()),wordBank,memo);
                 if(result != null){
                     totalWays=new ArrayList<>();
                     for(int k=0;k<result.size();k++){
@@ -53,7 +53,7 @@ public class AllConstruct {
         target=br.readLine();
         HashMap<String,ArrayList<ArrayList<String>>> memo=new HashMap<>();
         AllConstruct c=new AllConstruct();
-        ArrayList<ArrayList<String>> sol=c.allConstructs2(target,wordBank,memo);
+        ArrayList<ArrayList<String>> sol=c.allConstructs(target,wordBank,memo);
         ArrayList<String > t;
         System.out.println("Total Ways = "+sol.size());
         System.out.println(sol);
