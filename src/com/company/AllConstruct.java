@@ -22,8 +22,6 @@ public class AllConstruct {
             if(target.indexOf(wordBank[i]) == 0){
                 ArrayList<ArrayList<String >> result=allConstructs2(target.substring(wordBank[i].length()),wordBank,memo);
                 if(result != null){
-                    //totalWays= (ArrayList<ArrayList<String>>) result.clone();
-                    //totalWays = new ArrayList<>(result);
                     totalWays=new ArrayList<>();
                     for(int k=0;k<result.size();k++){
                         //If we do not clone it then it will affect the solution set of target.substring(wordBank[i].length);
@@ -57,17 +55,7 @@ public class AllConstruct {
         AllConstruct c=new AllConstruct();
         ArrayList<ArrayList<String>> sol=c.allConstructs2(target,wordBank,memo);
         ArrayList<String > t;
-        /*for(int i=0;i<sol.size();i++){
-            /*t=sol.get(i);
-            System.out.print("[");
-            for(int j =0;j<t.size();j++){
-                System.out.print(t.get(j)+",");
-            }
-            System.out.println("]");
-            System.out.println(sol.get(i));
-            System.out.println();
-        }
-        */
+        System.out.println("Total Ways = "+sol.size());
         System.out.println(sol);
     }
 }
